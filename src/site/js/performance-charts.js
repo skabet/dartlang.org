@@ -7,13 +7,14 @@ $(document).ready(function() {
       function(data) {
         $.each(data, function(index) {
           var benchmark = data[index];
+          var linkName = benchmark['name'].replace(/ /g, '');
           $(nav).append('<li class="' +
             (index == 0 ? 'active' : '') +
-            '"><a href="#' + benchmark['name'] +
+            '"><a href="#' + linkName +
             '" data-toggle="tab">' + benchmark['name'] + '</a></li>');
           $(charts).append('<div class="tab-pane ' +
             (index == 0 ? 'active' : '') +
-            '" id="' + benchmark['name'] + '">' +
+            '" id="' + linkName + '">' +
             '<iframe style="border: 0" src="//public-golem.storage.googleapis.com/' +
             benchmark['graph'] + '" ' +
             'width="900" height="440"></iframe></div>');
