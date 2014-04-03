@@ -47,16 +47,16 @@ Benchmark descriptions
   benchmarking suite. For all benchmarks, we track requests-per-second,
   average latency and max latency.
 
-  * [Hello](https://github.com/dart-lang/ton80/tree/master/lib/src/RestServer/dart/server.dart)
+  * [Hello](https://github.com/dart-lang/ton80/tree/master/lib/src/Serve/dart/server.dart)
   is a simply HTTP server, responding the string "world" to all requests. This
   benchmark is showing the peek requests-per-second, for HTTP server running
   a single isolate.
 
-  * [File](https://github.com/dart-lang/ton80/tree/master/lib/src/RestServer/dart/server.dart)
+  * [File](https://github.com/dart-lang/ton80/tree/master/lib/src/Serve/dart/server.dart)
   is a HTTP server that responds with the content of a 100kb file. This
   benchmark is mostly bound by file I/O.
 
-  * [JSON](https://github.com/dart-lang/ton80/tree/master/lib/src/RestServer/dart/server.dart)
+  * [JSON](https://github.com/dart-lang/ton80/tree/master/lib/src/Serve/dart/server.dart)
   is a HTTP server that responds with the a dynamically generated JSON string,
   for each request. This benchmark reflects some REST-like APIs, where it's
   common to JSON-encode the response.
